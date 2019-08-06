@@ -1,6 +1,5 @@
 # WordPress CheatSheet
-``
-WordPress CheatSheet
 
-Just another WordPress CheatSheet site!
-``
+# WordPress CheatSheet
+# Just another WordPress CheatSheet site!
+
