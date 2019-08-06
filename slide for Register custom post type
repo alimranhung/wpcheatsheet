@@ -30,7 +30,7 @@
 <?php endforeach; wp_reset_query(); ?>
 
 
-//Add to Functions.php custom register type.
+//Add to Functions.php custom register type Example.
 add_action( 'init', 'my_theme_custom_post' );
 function my_theme_custom_post() {
     register_post_type( 'slide',
@@ -38,6 +38,30 @@ function my_theme_custom_post() {
             'labels' => array(
                 'name' => __( 'Slides' ),
                 'singular_name' => __( 'Slide' )
+            ),
+            'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes'),
+            'public' => false,
+            'show_ui' => true
+        )
+    );
+    
+    register_post_type( 'feature',
+        array(
+            'labels' => array(
+                'name' => __( 'Features' ),
+                'singular_name' => __( 'Feature' )
+            ),
+            'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes'),
+            'public' => false,
+            'show_ui' => true
+        )
+    );
+
+    register_post_type( 'service',
+        array(
+            'labels' => array(
+                'name' => __( 'Services' ),
+                'singular_name' => __( 'Service' )
             ),
             'supports' => array('title', 'editor', 'custom-fields', 'thumbnail', 'page-attributes'),
             'public' => false,
