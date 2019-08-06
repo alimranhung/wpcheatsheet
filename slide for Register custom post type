@@ -1,4 +1,4 @@
-<!-- Add to Html custom register type Example-->
+<!-- Add to Html Custom post loop with custom fields Example-->
 <?php
     global $post;
     $args = array( 'posts_per_page' => 5, 'post_type'=> 'slide', 'orderby' => 'menu_order', 'order' => 'ASC' );
@@ -30,7 +30,7 @@
 <?php endforeach; wp_reset_query(); ?>
 
 
-//Add to Functions.php custom register type
+//Add to Functions.php custom register type.
 add_action( 'init', 'my_theme_custom_post' );
 function my_theme_custom_post() {
     register_post_type( 'slide',
